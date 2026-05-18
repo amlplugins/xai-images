@@ -1,0 +1,44 @@
+{
+  "name": "@amlplugins/xai-images",
+  "version": "0.0.1",
+  "description": "Native @ai-sdk/xai SDK re-exported under the @amlplugins namespace — xAI Image Generation — Grok image models (grok-2-image, grok-2-image-1212) via @ai-sdk/xai imageModel adapter.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@ai-sdk/xai": "^3.0.91",
+    "ai": "^6.0.184"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amlplugins/xai-images.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}
